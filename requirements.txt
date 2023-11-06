@@ -10,7 +10,7 @@ click-plugins==1.1.1
 cligj==0.7.2
 colorama==0.4.6
 contourpy==1.0.6
-cycler==0.12.1
+cycler==0.11.0
 fiona==1.9.5
 folium==0.14.0
 fonttools==4.44.0
