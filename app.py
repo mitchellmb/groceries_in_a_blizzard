@@ -32,7 +32,8 @@ st.header('Route generation')
 
 st.write('''Input a grocery store you\'d like to visit, 
          your starting home address, 
-         and a maximum distance you\'re willing to travel as a radius around your home.''')
+         and a maximum distance you\'re willing to travel as a radius around your home.
+         Note: Snow clusters ARE NOT avoided by default.''')
 
 
 #User input section:   
@@ -40,8 +41,8 @@ groc = st.text_input('Grocery store', 'Target')
 addr = st.text_input('Home address', '420 SE Main St, Minneapolis, MN 55414')
 rad = st.slider('Radius (miles)', 1, 5, value=2, step=1)
 
-st.write('Does the route differ if these snow clusters aren\'t avoided?')
-check = st.toggle('Avoid car tag & tow clusters', value=True)
+st.write('Does the route differ if snow clusters are avoided?')
+check = st.toggle('Avoid snow clusters', value=False)
 
 
 #Route generation section:
@@ -90,7 +91,7 @@ else:
              
     st.write('''Perhaps try routing to one of these if your preferred store is not listed!''')
     #List the top 10 safest stores
-    for i, name in enumerate(route.groc['Name'].iloc[0:11]):
+    for i, name in enumerate(route.groc['Name'].iloc[0:10]):
         st.markdown('(' + str(i+1) + ') ' + name)
     
     st.write('''Grocery stores are ranked by how far they are from your home address
