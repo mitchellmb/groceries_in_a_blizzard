@@ -6,10 +6,9 @@ resupply. The goal of this project is to determine the safest route a resident c
 
 A full description and running demo of the project can be found at https://groceries-in-a-blizzard.onrender.com/. Note: the free version of the web hosting service is quite slow and will take a while to run. A local installation will run *significantly* faster, but will require an OpenRoute Service API token (https://openrouteservice.org/).
 
-Installation:
+### Installation:
 - Python version 3.10.13 or above
 - pip install r- requirements.txt
 
-Running:
-
-streamlit run app.py
+### Running:
+- streamlit run app.py
